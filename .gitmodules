@@ -1,0 +1,4 @@
+[submodule "hil"]
+	path = hil
+	url = git@github.com:fvioz/hil.git
+	branch = develop
