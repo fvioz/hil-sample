@@ -7,10 +7,11 @@ class Main:
   def __init__(self):
     super(Main, self).__init__()
     self.hil = Core()
+    self.apps = [Bell, Dialog]
 
   def run(self):
-    self.hil.addComponent(Bell)
-    self.hil.addComponent(Dialog)
+    for app in self.apps:
+      self.hil.addComponent(app)
     self.hil.start()
 
 if __name__ == "__main__":
