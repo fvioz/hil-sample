@@ -2,15 +2,12 @@
 
 import sys
 import tkinter as tk
-import apps.dialog.app
 from hil import Component
+from apps.dialog.app import App
 
 class Dialog(Component):
-
   def show():
-    # root = tk.Tcl()
-    # app = App(master=root)
-    # print(dir(app))
-    # app.mainloop()
-    sys.exit({"Hello": "World"})
-
+    root = tk.Tk()
+    app = App(master=root)
+    app.mainloop()
+    return {"Hello": "World"}
