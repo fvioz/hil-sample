@@ -1,0 +1,31 @@
+variables:
+  human:
+    h_var1: 1
+    h_var2: 2
+    h_var3: 3
+  machine:
+    - m_var1
+    - m_var2
+
+feedback:
+  a: function_hello
+  b: function_world
+
+operation:
+  sample1:
+    in: m_var1
+    context:
+      h_var1: 1
+      h_var2: 2
+      h_var3: 3
+    out:
+      - a
+      - b
+  sample2:
+    in: m_var2
+    context:
+      h_var1: 1
+      h_var2: 2
+      h_var3: 3
+    out:
+      - a
