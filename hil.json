@@ -1,33 +1,20 @@
 {
-  "participations": [
-    "Sound",
-    "Interaction"
-  ],
-  "contexts": [
-    "m_var1",
-    "m_var2",
-    "m_var3"
-  ],
-  "actions": [
-    "Bell",
-    "Dialog"
-  ],
-  "transitions": {
-    "Sound": [
-      {
+  "Sound": [
+    {
+      "contexts": {
         "m_var1": "1",
         "m_var2": "2",
-        "m_var3": "3",
-        "result": ["Bell"]
+        "m_var3": 3
+      },
+      "attention_levels": {
+        "hight": {
+          "role_1": ["Bell"],
+          "role_2": ["Dialog"]
+        },
+        "medium": {
+          "role_1": ["Bell"]
+        }
       }
-    ],
-    "Interaction": [
-      {
-        "m_var1": "2",
-        "m_var2": "3",
-        "m_var3": "4",
-        "result": ["Dialog"]
-      }
-    ]
-  }
+    }
+  ]
 }

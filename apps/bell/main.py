@@ -4,6 +4,6 @@ import time
 from hil import Component
 
 class Bell(Component):
-  def run(self):
+  def run(self, id):
     print(chr(7))
     return 'None'

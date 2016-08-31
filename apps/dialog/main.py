@@ -6,7 +6,7 @@ from hil import Component
 from apps.dialog.app import App
 
 class Dialog(Component):
-  def run(self):
+  def run(self, id):
     root = tk.Tk()
     app = App(master=root)
     app.mainloop()
