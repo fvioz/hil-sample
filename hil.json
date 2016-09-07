@@ -1,18 +1,114 @@
 {
-  "Sound": [
+  "drive-strong-rain": [
     {
-      "contexts": {
-        "m_var1": "1",
-        "m_var2": "2",
-        "m_var3": 3
+      "context": {
+        "hands": "steering_wheel",
+        "user_state": "alert",
+        "user_capacity": "driver"
       },
       "attention_levels": {
-        "hight": {
-          "role_1": ["Bell"],
-          "role_2": ["Dialog"]
+        "feedback": {
+          "sensor": ["Vibration"],
+          "take_decisions": ["Vibration"],
+          "perform": ["Vibration"]
         },
-        "medium": {
-          "role_1": ["Bell"]
+        "action": {
+          "sensor": ["Voice"],
+          "take_decisions": ["Voice"],
+          "perform": ["Voice"]
+        }
+      }
+    },
+    {
+      "context": {
+        "hands": "steering_wheel",
+        "user_state": "distraido",
+        "user_capacity": "driver"
+      },
+      "attention_levels": {
+        "feedback": {
+          "sensor": ["Sound"],
+          "take_decisions": ["Sound"],
+          "perform": ["Sound"]
+        },
+        "action": {
+          "sensor": ["Voice"],
+          "take_decisions": ["Voice"],
+          "perform": ["Voice"]
+        }
+      }
+    }
+  ],
+  "crossing-an-intersection": [
+   {
+      "context": {
+        "user_capacity": "driver"
+      },
+      "attention_levels": {
+        "feedback": {
+          "take_decisions": ["Vibration"]
+        },
+        "action": {
+          "take_decisions": ["Voice"]
+        }
+      }
+    }
+  ],
+  "traffic-sign-speed-limit": [
+   {
+      "context": {
+        "user_state": "alert"
+      },
+      "attention_levels": {
+        "feedback": {
+          "sensor": ["Sound"]
+        },
+        "action": {
+          "sensor": ["React"]
+        }
+      }
+    }
+  ],
+  "recognize-signs-of-a-cop": [
+    {
+      "context": {
+        "eyes_orientation": "front"
+      },
+      "attention_levels": {
+        "feedback": {
+          "sensor": ["Vibration"]
+        },
+        "action": {
+          "sensor": ["Dialog"]
+        }
+      }
+    },
+    {
+      "context": {
+        "eyes_orientation": "no_front"
+      },
+      "attention_levels": {
+        "feedback": {
+          "sensor": ["Sound"]
+        },
+        "action": {
+          "sensor": ["Dialog"]
+        }
+      }
+    }
+  ],
+  "difficulty-managing-broken-traffic-lights": [
+   {
+      "context": {
+        "user_state": "alert",
+        "user_capacity": "driver"
+      },
+      "attention_levels": {
+        "feedback": {
+          "take_decisions": ["Vibration"]
+        },
+        "action": {
+          "take_decisions": ["Dialog"]
         }
       }
     }
